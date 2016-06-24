@@ -1,10 +1,11 @@
 //
-//  LongDeleteViewController.m
-//  UicollectionviewUse
+//  LongDeleteViewController.h
+//  UICollectionview
 //
-//  Created by Xia_Q on 16/6/24.
-//  Copyright © 2016年 X. All rights reserved.
+//  Created by Xia_Q on 15/11/12.
+//  Copyright (c) 2015年 XiaQiang. All rights reserved.
 //
+
 #import "LongDeleteViewController.h"
 
 #define fDeviceWidth ([UIScreen mainScreen].bounds.size.width)

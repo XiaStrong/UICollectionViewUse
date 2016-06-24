@@ -37,7 +37,7 @@
     CAReplicatorLayer *replicatorLayer = (CAReplicatorLayer *)self.layer;
     replicatorLayer.instanceTransform = t;
     replicatorLayer.instanceCount =2; //layer和一个副本laye
-    replicatorLayer.instanceRedOffset = -0.5; //将rgb的三色值缩小0.75
+    replicatorLayer.instanceRedOffset = -0.5; //将rgb的三色值缩小0.5
     replicatorLayer.instanceGreenOffset = -0.5;
     replicatorLayer.instanceBlueOffset = -0.5;
 }

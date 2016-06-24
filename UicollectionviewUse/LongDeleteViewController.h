@@ -1,11 +1,10 @@
 //
-//  LongDeleteViewController.h
-//  UicollectionviewUse
+//  CollectionViewCell.h
+//  UICollectionview
 //
 //  Created by Xia_Q on 15/11/12.
 //  Copyright (c) 2015年 XiaQiang. All rights reserved.
 //
-
 
 #import <UIKit/UIKit.h>
 #import "CollectionViewCell.h"
