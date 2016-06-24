@@ -85,7 +85,7 @@
         
         view=[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header" forIndexPath:indexPath];
         view.backgroundColor=[UIColor orangeColor];
-        NSLog(@"%@",view.subviews[0].class);
+//        NSLog(@"%@",view.subviews[0].class);
 //        UILabel *lable = (UILabel *)[view viewWithTag:0]; 不知道为什么出错了，所以用下面的方法取值
         UILabel *lable =(UILabel *)view.subviews[0];
         lable.text =[NSString stringWithFormat:@"第%d列" ,indexPath.section];
