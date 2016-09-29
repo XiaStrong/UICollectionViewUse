@@ -16,6 +16,8 @@
 {
     NSMutableArray *_photosArray;
     BOOL x;
+    UIImageView *image;
+    CGRect rect;
 }
 
 @end
@@ -49,8 +51,6 @@
     self.automaticallyAdjustsScrollViewInsets=NO;
     
     self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, fDeviceWidth, fDeviceHeight) collectionViewLayout:flowLayout];
-    
-    
     //设置代理
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -162,10 +162,46 @@
 //UICollectionView被选中时调用的方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+ 
+    CollectionViewCell *cell = (CollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+//    CGRect rect = [tableView convertRect:rectInTableView toView:[tableView superview]];
+    rect = [collectionView convertRect:cell.frame toView:collectionView];
     
+    float y = collectionView.contentOffset.y;
+
+    
+    UIImage *img= cell.myImageView.image;
+    [image removeFromSuperview];
+    image=nil;
+    image =[[UIImageView alloc]init ];
+    image.frame=CGRectMake(rect.origin.x, rect.origin.y-y, rect.size.width, rect.size.height);
+    image.image=img;
+    image.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tgr= [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tgrTouch:)];
+    tgr.numberOfTapsRequired=1;
+    [image addGestureRecognizer:tgr];
+    [self.view addSubview:image];
+
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        collectionView.userInteractionEnabled= NO;
+        image.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    }];
+    
+    
+    NSLog(@"%f,%f,%f,%f,%f",rect.origin.x,rect.origin.y,rect.size.width,rect.size.height,y);
     NSLog(@"选择%ld",indexPath.row);
 }
 
+
+-(void)tgrTouch:(UITapGestureRecognizer *)tgr{
+    
+    [UIView animateWithDuration:0.4 animations:^{
+        [image removeFromSuperview];
+        image= nil;
+        self.collectionView.userInteractionEnabled= YES;
+    }];
+}
 
 
 - (void)didReceiveMemoryWarning {
