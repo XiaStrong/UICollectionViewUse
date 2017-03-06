@@ -10,6 +10,8 @@
 #import "ViewController1.h"
 #import "ViewController2.h"
 #import "LongDeleteViewController.h"
+#import "WaterFallViewController.h"
+
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
     NSArray *dataArr;
@@ -22,7 +24,7 @@
     [super viewDidLoad];
     self.title=@"uicollectionview使用";
     self.automaticallyAdjustsScrollViewInsets=NO;
-    dataArr=@[@"基础",@"带镜面的",@"长按删除Cell"];
+    dataArr=@[@"基础",@"带镜面的",@"长按删除Cell",@"瀑布流"];
 
     _myTab.delegate=self;
     _myTab.dataSource=self;
@@ -43,7 +45,10 @@
         LongDeleteViewController *lvc=[[LongDeleteViewController alloc]init];
         [self.navigationController pushViewController:lvc animated:YES];
     }
-    
+    if (indexPath.row == 3) {
+        WaterFallViewController *vc = [[WaterFallViewController alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		15677FD81D1C4D8C003091A3 /* 22.png in Resources */ = {isa = PBXBuildFile; fileRef = 15677FD71D1C4D8C003091A3 /* 22.png */; };
+		156AE6A81E6D59F200FF33C1 /* WaterFallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 156AE6A61E6D59F200FF33C1 /* WaterFallViewController.m */; };
+		156AE6A91E6D59F200FF33C1 /* WaterFallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 156AE6A71E6D59F200FF33C1 /* WaterFallViewController.xib */; };
+		156AE6AC1E6D5A0700FF33C1 /* WaterFallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 156AE6AB1E6D5A0700FF33C1 /* WaterFallLayout.m */; };
 		15EF6A881D1CC605002BE53B /* LongDeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EF6A871D1CC605002BE53B /* LongDeleteViewController.m */; };
 		15EF6A8D1D1CC642002BE53B /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EF6A8B1D1CC642002BE53B /* CollectionViewCell.m */; };
 		15EF6A8E1D1CC642002BE53B /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15EF6A8C1D1CC642002BE53B /* CollectionViewCell.xib */; };
@@ -68,6 +71,11 @@
 
 /* Begin PBXFileReference section */
 		15677FD71D1C4D8C003091A3 /* 22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 22.png; path = ../22.png; sourceTree = "<group>"; };
+		156AE6A51E6D59F200FF33C1 /* WaterFallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFallViewController.h; sourceTree = "<group>"; };
+		156AE6A61E6D59F200FF33C1 /* WaterFallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFallViewController.m; sourceTree = "<group>"; };
+		156AE6A71E6D59F200FF33C1 /* WaterFallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WaterFallViewController.xib; sourceTree = "<group>"; };
+		156AE6AA1E6D5A0700FF33C1 /* WaterFallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFallLayout.h; sourceTree = "<group>"; };
+		156AE6AB1E6D5A0700FF33C1 /* WaterFallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFallLayout.m; sourceTree = "<group>"; };
 		15EF6A861D1CC605002BE53B /* LongDeleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LongDeleteViewController.h; sourceTree = "<group>"; };
 		15EF6A871D1CC605002BE53B /* LongDeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongDeleteViewController.m; sourceTree = "<group>"; };
 		15EF6A8A1D1CC642002BE53B /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
@@ -149,6 +157,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		156AE6A41E6D593200FF33C1 /* 瀑布流 */ = {
+			isa = PBXGroup;
+			children = (
+				156AE6A51E6D59F200FF33C1 /* WaterFallViewController.h */,
+				156AE6A61E6D59F200FF33C1 /* WaterFallViewController.m */,
+				156AE6A71E6D59F200FF33C1 /* WaterFallViewController.xib */,
+				156AE6AA1E6D5A0700FF33C1 /* WaterFallLayout.h */,
+				156AE6AB1E6D5A0700FF33C1 /* WaterFallLayout.m */,
+			);
+			name = "瀑布流";
+			sourceTree = "<group>";
+		};
 		15EF6A891D1CC613002BE53B /* 长按删除Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +239,7 @@
 				15F7AE911D1B72FD00969ED4 /* Main.storyboard */,
 				15F7AEC01D1B802100969ED4 /* UIColor+RandomColor.h */,
 				15F7AEC11D1B802100969ED4 /* UIColor+RandomColor.m */,
+				156AE6A41E6D593200FF33C1 /* 瀑布流 */,
 				15EF6A8F1D1CC65E002BE53B /* photos */,
 				15EF6A891D1CC613002BE53B /* 长按删除Cell */,
 				15F7AED21D1BC1ED00969ED4 /* 带镜面的 */,
@@ -413,6 +434,7 @@
 				15EF6AB51D1CC65E002BE53B /* 7.jpg in Resources */,
 				15EF6A8E1D1CC642002BE53B /* CollectionViewCell.xib in Resources */,
 				15F7AE931D1B72FD00969ED4 /* Main.storyboard in Resources */,
+				156AE6A91E6D59F200FF33C1 /* WaterFallViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				156AE6AC1E6D5A0700FF33C1 /* WaterFallLayout.m in Sources */,
 				15F7AEBE1D1B7BCC00969ED4 /* ViewController1.m in Sources */,
 				15F7AEDA1D1BC29800969ED4 /* V2Layout.m in Sources */,
 				15F7AEC21D1B802100969ED4 /* UIColor+RandomColor.m in Sources */,
@@ -444,6 +467,7 @@
 				15F7AE8D1D1B72FD00969ED4 /* AppDelegate.m in Sources */,
 				15F7AE8A1D1B72FD00969ED4 /* main.m in Sources */,
 				15EF6A8D1D1CC642002BE53B /* CollectionViewCell.m in Sources */,
+				156AE6A81E6D59F200FF33C1 /* WaterFallViewController.m in Sources */,
 				15F7AEDD1D1BC47D00969ED4 /* V2View.m in Sources */,
 				15EF6A881D1CC605002BE53B /* LongDeleteViewController.m in Sources */,
 				15F7AED61D1BC20B00969ED4 /* ViewController2.m in Sources */,
